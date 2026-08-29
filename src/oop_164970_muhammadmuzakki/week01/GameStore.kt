@@ -12,4 +12,9 @@ fun calculateDiscount(price: Int): Int = if (price > 500000) price-(price*20/100
 
 fun printReceipt(title: String, price: Int, finalPrice: Int) {
     println("Title: $title, Price: $price, FinalPrice: $finalPrice")
+
+    val userNote: String? = null
+    val displayNote = userNote ?: "There are no notes."
+
+    println("Note: $displayNote")
 }
