@@ -2,21 +2,21 @@ package oop_164970_muhammadmuzakki.week02
 
 import java.util.Scanner
 
-fun main(){
+/*fun main() {
     val scanner = Scanner(System.`in`)
 
     println("--- APLIKASI PMB UMN ---")
 
     print("Masukkan Nama: ")
-    val name= scanner.nextLine()
+    val name = scanner.nextLine()
     print("Masukkan NIM (Wajib 5 Karakter): ")
-    val nim= scanner.next()
+    val nim = scanner.next()
 
     scanner.nextLine()
 
-    if(nim.length != 5){
+    if (nim.length != 5) {
         println("ERROR: Pendaftaran dibatalkan. NIM harus 5 karakter!")
-    }else{
+    } else {
         print("Masukkan Jurusan: ")
         val major = scanner.nextLine()
 
@@ -28,15 +28,16 @@ fun main(){
     val type = scanner.nextInt()
     scanner.nextLine()
 
-    if(type == 1){
+    if (type == 1) {
         print("Masukkan Jurusan: ")
         val major = scanner.nextLine()
         val s1 = Student(name, nim, major)
         println("Terdaftar di: ${s1.major} dengan GPA awal ${s1.gpa}")
-    }else if(type == 2){
+    } else if (type == 2) {
         val s2 = Student(name, nim)
         println("Terdaftar di: ${s2.major} dengan GPA awal ${s2.gpa}")
-    }else{
+    } else {
         println("Pilihan ngawur, pendaftaran batal!")
     }
-}
+}*/
+
