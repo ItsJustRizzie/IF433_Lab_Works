@@ -41,3 +41,21 @@ import java.util.Scanner
     }
 }*/
 
+fun main() {
+    val scanner = Scanner(System.`in`)
+    print("Masukkan Judul Buku: ")
+    val title = scanner.nextLine()
+    print("Masukkan Nama Peminjam: ")
+    val borrower = scanner.nextLine()
+    print("Masukkan Lama Pinjam (Hari): ")
+    var duration = scanner.nextInt()
+
+    if (duration < 0) {
+        println("Durasi tidak valid! Diubah otomatis menjadi 1 hari.")
+        duration = 1
+    }
+
+    val currentLoan = Loan(title, borrower, duration)
+    println("Detail Pinjaman: ${currentLoan.borrower} meminjam '${currentLoan.bookTitle}' selama ${currentLoan.loanDuration} hari.")
+    println("Total Denda: Rp${currentLoan.calculateFine()}")
+}
