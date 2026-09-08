@@ -41,7 +41,7 @@ import java.util.Scanner
     }
 }*/
 
-fun main() {
+/*fun main() {
     val scanner = Scanner(System.`in`)
     print("Input Book Title: ")
     val title = scanner.nextLine()
@@ -58,4 +58,48 @@ fun main() {
     val currentLoan = Loan(title, borrower, duration)
     println("Loan Details: ${currentLoan.borrower} borrowed '${currentLoan.bookTitle}' for ${currentLoan.loanDuration} days.")
     println("Total Fine: Rp${currentLoan.calculateFine()}")
+}*/
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+
+    print("Enter Your Name: ")
+    val heroName = scanner.nextLine()
+    print("Enter Your Base Damage: ")
+    val baseDamage = scanner.nextInt()
+    val myHero = Hero(heroName, baseDamage)
+    var enemyHp = 100
+
+    while (myHero.isAlive() && enemyHp > 0) {
+        println("\n--- STATUS ---\n")
+        println("${myHero.name} HP: ${myHero.hp} | Enemy HP: $enemyHp")
+        print("Choose Action: 1. Attack, 2. Flee: ")
+
+        val choice = scanner.nextInt()
+
+        if (choice == 1) {
+            myHero.attack("Enemy")
+            enemyHp -= myHero.baseDamage
+            println("Remaining Enemy HP: $enemyHp")
+            if (enemyHp > 0) {
+                val enemyDamage = (10..20).random()
+                println("Enemy counterattacks with $enemyDamage damage!")
+                myHero.takeDamage(enemyDamage)
+            }
+        } else if (choice == 2) {
+            println("${myHero.name} chooses to flee from the fight!")
+            break
+        } else {
+            println("Invalid choice!")
+        }
+    }
+
+    println("\n--- RESULT: ---\n")
+    if (myHero.isAlive() && enemyHp < 0) {
+        println("You Win!")
+    } else if (myHero.isAlive()) {
+        println("${myHero.name} has been defeated! Game Over.")
+    } else {
+        println("${myHero.name} has fled from the fight!")
+    }
 }
