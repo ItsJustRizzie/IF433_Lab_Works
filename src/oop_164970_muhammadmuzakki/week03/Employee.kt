@@ -3,12 +3,7 @@ package oop_164970_muhammadmuzakki.week03
 class Employee(val name: String) {
     var salary: Int = 0
         set(value) {
-            if (value < 0) {
-                println("ERROR: Gaji tidak boleh negatif! Di-set ke 0.")
-                field = 0
-            } else {
-                field = value
-            }
+            field = if (value < 0) 0 else value
         }
     private var performanceRating: Int = 3
 
