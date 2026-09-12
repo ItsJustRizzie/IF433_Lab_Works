@@ -20,3 +20,14 @@ package oop_164970_muhammadmuzakki.week03
     println("Damage: ${w.damage}")
     println("Rarity: ${w.tier}")
 }*/
+
+fun main() {
+    val player1 = Player("ILoveJunoBeastars")
+
+    println("\nAdded 50 XP")
+    player1.addXp(50)
+    println("Current level: ${player1.level}")
+
+    println("Added 60 more XP")
+    player1.addXp(60)
+}
