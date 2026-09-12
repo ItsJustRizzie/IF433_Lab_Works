@@ -10,3 +10,13 @@ package oop_164970_muhammadmuzakki.week03
 
     println("Pajak yang harus dibayar: ${e.tax}")
 }*/
+
+/*fun main() {
+    val w = Weapon("Railgun")
+
+    w.damage = 1000
+
+    println("Weapon: ${w.name}")
+    println("Damage: ${w.damage}")
+    println("Rarity: ${w.tier}")
+}*/
