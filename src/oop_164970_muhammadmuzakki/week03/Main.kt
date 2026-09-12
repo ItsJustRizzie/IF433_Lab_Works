@@ -1,6 +1,6 @@
 package oop_164970_muhammadmuzakki.week03
 
-fun main() {
+/*fun main() {
     val e = Employee("Budi")
 
     e.salary = 5000000
@@ -9,4 +9,4 @@ fun main() {
     e.increasePerformance()
 
     println("Pajak yang harus dibayar: ${e.tax}")
-}
+}*/
