@@ -12,8 +12,12 @@ open class Vehicle(val brand: String) {
     }
 }
 
-open class Car(brand: String val numberOfDoors: Int) : Vehicle(brand) {
+open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
     fun openTrunk() {
         println("Trunk of $brand with $numberOfDoors door(s) is opened.")
+    }
+
+    override fun honk() {
+        println("HONK! HONK! A $brand car is passing through!")
     }
 }
