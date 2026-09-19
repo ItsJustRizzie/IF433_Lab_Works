@@ -26,3 +26,9 @@ open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
         println("A $brand car used its transmission gear to increase speed.")
     }
 }
+
+open class ElectricCar(brand: String, numberOfDoors: Int, val batteryCapacity: Int) : Car(brand, numberOfDoors) {
+    final override fun accelerate() {
+        println("$brand accelerated in silence. Battery capacity: $batteryCapacity%.")
+    }
+}
