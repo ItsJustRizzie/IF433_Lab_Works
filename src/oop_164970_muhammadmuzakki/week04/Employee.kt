@@ -19,3 +19,9 @@ open class Manager(name: String, baseSalary: Int) : Employee(name, baseSalary) {
         return super.calculateBonus() + 500000
     }
 }
+
+open class Developer(name: String, baseSalary: Int, val programmingLanguage: String) : Employee(name, baseSalary) {
+    override fun work() {
+        println("$name is using $programmingLanguage.")
+    }
+}
