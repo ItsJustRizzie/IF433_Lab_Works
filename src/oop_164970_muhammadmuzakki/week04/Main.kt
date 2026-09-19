@@ -1,6 +1,6 @@
 package oop_164970_muhammadmuzakki.week04
 
-fun main() {
+/*fun main() {
     println("--- TESTING VEHICLE ---")
     val generalVehicle = Vehicle("Sepeda Onthel")
     generalVehicle.honk()
@@ -11,4 +11,12 @@ fun main() {
     myCar.openTrunk()
     myCar.honk()
     myCar.accelerate()
+}*/
+
+fun main() {
+    println("--- TESTING EV ---")
+    val myCar = ElectricCar("Tesla", 4, 100)
+    myCar.accelerate()
+    myCar.honk()
+    myCar.openTrunk()
 }
