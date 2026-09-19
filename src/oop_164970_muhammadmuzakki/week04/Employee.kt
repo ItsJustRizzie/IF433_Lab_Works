@@ -9,3 +9,13 @@ open class Employee(val name: String, val baseSalary: Int) {
         return baseSalary * 10 / 100
     }
 }
+
+open class Manager(name: String, baseSalary: Int) : Employee(name, baseSalary) {
+    override fun work() {
+        println("$name is leading a divisional meeting.")
+    }
+
+    override fun calculateBonus(): Int {
+        return super.calculateBonus() + 500000
+    }
+}
