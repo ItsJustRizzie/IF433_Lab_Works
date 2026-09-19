@@ -11,12 +11,13 @@ package oop_164970_muhammadmuzakki.week04
     myCar.openTrunk()
     myCar.honk()
     myCar.accelerate()
-}*/
+}*/ //LAB PRACTICUM
 
-fun main() {
+/*fun main() {
     println("--- TESTING EV ---")
     val myCar = ElectricCar("Tesla", 4, 100)
     myCar.accelerate()
     myCar.honk()
     myCar.openTrunk()
-}
+}*/ //ASSIGNMENT 1
+
