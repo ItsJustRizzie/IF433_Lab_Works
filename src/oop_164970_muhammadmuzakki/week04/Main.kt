@@ -21,3 +21,14 @@ package oop_164970_muhammadmuzakki.week04
     myCar.openTrunk()
 }*/ //ASSIGNMENT 1
 
+fun main() {
+    println("--- TESTING MANAGER ---")
+    val manager = Manager("Boss", baseSalary = 10000000)
+    manager.work()
+    println("Bonus: Rp${manager.calculateBonus()}")
+
+    println("--- TESTING DEVELOPER ---")
+    val developer = Developer("Rache Bartmoss", baseSalary = 8000000, programmingLanguage = "C++")
+    developer.work()
+    println("Bonus: Rp${developer.calculateBonus()}")
+}
