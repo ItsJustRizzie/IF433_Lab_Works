@@ -20,4 +20,9 @@ open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
     override fun honk() {
         println("HONK! HONK! A $brand car is passing through!")
     }
+
+    override fun accelerate() {
+        super.accelerate()
+        println("A $brand car used its transmission gear to increase speed.")
+    }
 }
