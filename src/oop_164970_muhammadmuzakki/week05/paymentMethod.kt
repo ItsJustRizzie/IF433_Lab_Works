@@ -26,3 +26,18 @@ class EWallet(accountName: String, var balance: Double) : PaymentMethod(accountN
         }
     }
 }
+
+class CreditCard(accountName: String, var limit: Double) : PaymentMethod(accountName) {
+    var usedAmount: Double = 0.0
+
+    override fun processPayment(amount: Double): Boolean {
+        if (usedAmount + amount <= limit) {
+            usedAmount += amount
+            println("Transaction successful. Remaining card limit: ${limit - usedAmount}")
+            return true
+        } else {
+            println("Transaction canceled. Card limit reached!")
+            return false
+        }
+    }
+}
