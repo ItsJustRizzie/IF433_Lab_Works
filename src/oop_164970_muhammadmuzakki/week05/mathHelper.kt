@@ -1,6 +1,6 @@
 package oop_164970_muhammadmuzakki.week05
 
-class mathHelper {
+class MathHelper {
     fun areaCalculator(side: Int): Int {
         return side * side
     }
