@@ -39,11 +39,4 @@ fun main() {
     val creditCard = CreditCard("Kartu Kredit Utama", 1000000.0)
 
     val paymentList: List<PaymentMethod> = listOf(eWallet, creditCard)
-
-    val targetAmount = 75000.0
-    for (payment in paymentList) {
-        println("Mencoba proses pembayaran $targetAmount untuk ${payment.accountName}...")
-        payment.processPayment(targetAmount)
-        println()
-    }
 }
