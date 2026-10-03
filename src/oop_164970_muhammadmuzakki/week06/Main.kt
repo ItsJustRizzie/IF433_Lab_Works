@@ -1,7 +1,4 @@
-import oop_164970_muhammadmuzakki.week06.SmartCCTV
-import oop_164970_muhammadmuzakki.week06.SmartHomeHub
-import oop_164970_muhammadmuzakki.week06.SmartLamp
-import oop_164970_muhammadmuzakki.week06.SmartSpeaker
+package oop_164970_muhammadmuzakki.week06
 
 /**package oop_164970_muhammadmuzakki.week06
 
@@ -26,4 +23,15 @@ fun main() {
     val lamp = SmartLamp("L01", "Ruang Tamu")
     val speaker = SmartSpeaker("S01", "Google Nest Dapur")
     val cctv = SmartCCTV("L01", "Ezviz Garasi")
+
+    val hub = SmartHomeHub()
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
+
+    println("=== MENGAKTIFKAN MODE KEAMANAN ===")
+    hub.activateSecurityMode()
+
+    println("\n=== MEMATIKAN SEMUA SAKLAR ===")
+    hub.turnOffAllSwitches()
 }
