@@ -2,7 +2,7 @@ package oop_164970_muhammadmuzakki.week07
 
 import javax.xml.crypto.Data
 
-fun main() {
+/** fun main() {
     println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
     DatabaseManager.connect()
@@ -35,4 +35,4 @@ fun main() {
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
     }
     println(uiMessage)
-}
+} **/
