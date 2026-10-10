@@ -36,3 +36,9 @@ import javax.xml.crypto.Data
     }
     println(uiMessage)
 } **/
+
+fun main() {
+    println("=== 1. TEST SINGLETON ENGINE ===")
+    GameManager.startGame()
+    GameManager.startGame()
+}
