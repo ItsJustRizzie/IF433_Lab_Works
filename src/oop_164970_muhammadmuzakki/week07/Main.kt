@@ -40,5 +40,10 @@ import javax.xml.crypto.Data
 fun main() {
     println("=== 1. TEST SINGLETON ENGINE ===")
     GameManager.startGame()
-    GameManager.startGame()
+
+    println("\n=== 2. TEST ENUM & FACTORY ===")
+    println("Drop chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Mendapatkan senjata awal: ${starterWeapon.item.name}, Damage: ${starterWeapon.item.damage}, Durability: ${starterWeapon.durability}")
 }
