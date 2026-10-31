@@ -8,7 +8,7 @@ fun main() {
 
     println("\n===== TEST LET BLOCK =====")
     val validOrder = Order(null, 2500000)
-    val receipt = validOrder.totalPrice?.let {price ->
+    val receipt = validOrder.totalPrice?.let { price ->
         val tax = price * 0.11
         "Transaksi valid. Harga: Rp$price, Pajak: Rp$tax"
     } ?: "Transaksi invalid: Harga belum di-set!"
@@ -31,4 +31,12 @@ fun main() {
     val someObject: Any = 100
     val safeString = someObject as? Int ?: "Unknown String!"
     println("Hasil cast + fallback: $safeString")
+
+    println("\n===== TEST THE RED BUTTON (!!) =====")
+    val toxicData: String? = null
+    try {
+        val length = toxicData!!.length
+    } catch (e: NullPointerException) {
+        println("CRASH (NPE)! Jangan gunakan '!!' secara sembarangan.")
+    }
 }
