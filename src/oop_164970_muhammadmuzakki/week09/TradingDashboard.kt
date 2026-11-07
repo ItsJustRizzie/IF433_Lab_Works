@@ -30,4 +30,5 @@ fun main() {
     worstPerformers.forEach { println(it) }
     println("\n[ UNIQUE PAIRS ]")
     uniquePairs.forEach { println(it) }
+    println("===== END OF DASHBOARD =====")
 }
