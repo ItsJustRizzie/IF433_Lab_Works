@@ -10,7 +10,10 @@ fun main() {
         TradeLog("ADA", "LOW", 75, 9.1, "OPEN")
     )
 
-    val closedTrades = tradeHistory.filter {it.status == "CLOSED" }
-    val winningTrades = closedTrades.filter {it.roe > 0.0 }
-    val losingTrades = closedTrades.filter {it.roe <= 0.0}
+    val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+    val winningTrades = closedTrades.filter { it.roe > 0.0 }
+    val losingTrades = closedTrades.filter { it.roe <= 0.0 }
+    val topPerformers = winningTrades
+        .sortedByDescending { it.roe }
+        .map { "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)" }
 }
