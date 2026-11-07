@@ -24,6 +24,10 @@ fun main() {
         .toSet()
 
     println("===== CRYPTO TRADING DASHBOARD =====")
-    println("\n[ TOP PERFORMERS ]")
+    println("[ TOP PERFORMERS ]")
     topPerformers.forEach { println(it) }
+    println("\n[ WORST PERFORMERS ]")
+    worstPerformers.forEach { println(it) }
+    println("\n[ UNIQUE PAIRS ]")
+    uniquePairs.forEach { println(it) }
 }
