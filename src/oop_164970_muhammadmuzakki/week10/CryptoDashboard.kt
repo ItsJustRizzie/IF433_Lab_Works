@@ -10,4 +10,8 @@ fun main() {
     println("Status: ${response.status}")
     println("\nDaftar aset koin:")
     response.data.forEach { coin -> println("${coin.name}: ${coin.balance}") }
+    val txRepo = WalletRepository<Transaction>()
+    txRepo.add(Transaction("TX-001", 7.483))
+    txRepo.add(Transaction("TX-002", 2.916))
+    txRepo.add(Transaction("TX-003", 9.257))
 }
