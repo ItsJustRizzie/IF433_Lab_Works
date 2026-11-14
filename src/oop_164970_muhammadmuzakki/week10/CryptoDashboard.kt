@@ -5,4 +5,5 @@ fun main() {
     coinRepo.add(Coin("SOL", 12.5))
     coinRepo.add(Coin("ADA", 3400.0))
     coinRepo.add(Coin("LINK", 85.0))
+    val response = ApiResponse("200 OK", coinRepo.getAll())
 }
