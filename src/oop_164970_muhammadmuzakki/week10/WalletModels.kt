@@ -1,5 +1,9 @@
 package oop_164970_muhammadmuzakki.week10
 
-data class Coin(val name: String, val balance: Double) {}
+interface Nameable {
+    val name: String
+}
 
-data class Transaction(val id: String, val amount: Double) {}
+data class Coin(override val name: String, val balance: Double) : Nameable
+
+data class Transaction(val id: String, val amount: Double)
